@@ -1,0 +1,39 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.bundle.js",
+    "build": "webpack",
+    "dev": "nodemon ./index.js localhost 3080"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.8",
+    "debug": "^4.3.4",
+    "express": "^4.18.1",
+    "hapi": "^18.1.0",
+    "helmet": "^6.0.0",
+    "http-proxy-middleware": "^2.0.6",
+    "joi": "^17.6.0",
+    "mongoose": "^6.6.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "pug": "^3.0.2",
+    "underscore": "^1.13.4"
+  },
+  "devDependencies": {
+    "del": "^7.0.0",
+    "fancy-log": "^2.0.0",
+    "gulp": "^4.0.2",
+    "gulp-zip": "^5.1.0",
+    "jshint": "^2.13.5",
+    "nodemon": "^2.0.20",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-stream": "^7.0.0"
+  }
+}
