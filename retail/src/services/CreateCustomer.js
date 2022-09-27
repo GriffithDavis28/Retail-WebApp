@@ -12,7 +12,7 @@ const CreateCustomer = ({onChangeForm, createCustomer }) => {
                 <form>
                     <div className="row">
                     <div className="row">
-                        <div className="form-group col-md-12">
+                        <div className="form-group col-md-6">
                             <label htmlFor="exampleInputEmail1">Customer ID</label>
                             <input type="number" onChange={(e) => onChangeForm(e)} className="form-control" name="Customer ID" id="Customer ID" aria-describedby="customerID" placeholder="CustomerID" />
                         </div>

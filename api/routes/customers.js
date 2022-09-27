@@ -2,9 +2,10 @@ const Joi = require('joi');
 const express = require('express');
 const { where } = require('underscore');
 const router = express.Router();
+const auth = require('./../middleware/auth');
 
-router.get('/', (req,res) => {
-  console.log('Getting users==>');
+
+router.get('/', auth, (req,res) => {
     const mysql = require('mysql')
     const connection = mysql.createConnection({
       host: 'localhost',
@@ -25,7 +26,6 @@ router.get('/', (req,res) => {
   });
   
   router.get('/:id', (req, res) => {
-    console.log('Customer Details==>')
     const mysql = require('mysql')
     const connection = mysql.createConnection({
       host: 'localhost',
@@ -48,6 +48,9 @@ router.get('/', (req,res) => {
     
     connection.end()
 
+    //   const customer = Customers.find(c=> c.id == parseInt(req.params.id));
+    //   if(!customer) res.status(404).send("The customer with the id does not exist");
+    //   res.send(customer);
   });
   
   router.post('/', (req, res) => {
@@ -66,7 +69,6 @@ router.get('/', (req,res) => {
         salesRepEmployeeNumber: req.body.salesRepEmployeeNumber,
         creditLimit: req.body.creditLimit 
     };
-    console.log('Customer Added==>')
     console.log(customer);
     const mysql = require('mysql')
   const connection = mysql.createConnection({

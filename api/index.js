@@ -11,6 +11,7 @@ const details = require('./routes/orderDetails');
 const products = require('./routes/products');
 const express = require('express');
 const app = express();
+const login = require('./routes/login');
 
 app.set('view engine', 'pug');
 app.set('views', './views');
@@ -23,6 +24,7 @@ app.use('/api/customers', customers);
 app.use('/api/orders', orders);
 app.use('/api/details', details);
 app.use('/api/products', products);
+app.use('/api/login', login);
 
 console.log('Application Name: ' + config.get('name'));
 

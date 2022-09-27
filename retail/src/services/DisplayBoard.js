@@ -7,14 +7,14 @@ export const DisplayBoard = ({numberOfCustomers, getAllCustomers}) => {
         width: '100%',
         padding: '2%',
         backgroundColor: "red",
-        color: 'black',
+        color: 'white',
         textAlign: 'center'
     }
     
     return(
         <div style={{backgroundColor:'black'}} className="display-board">
-            <h4 style={{color: 'white'}}>customers</h4>
-            <div className="number">
+            <h4 style={{color: 'white'}}>Customers</h4>
+            <div style={{color: 'white'}}className="number">
             {numberOfCustomers}
             </div>
             <div className="btn">
